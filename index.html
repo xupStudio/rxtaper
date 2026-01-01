@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RxTaper: AI 減藥日記</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>RxTaper: 您的 AI 減藥智能助理</title>
+    <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header class="navbar">
@@ -18,10 +20,10 @@
                 <span>RxTaper</span>
             </div>
             <nav class="nav-links">
-                <a href="#features">功能特色</a>
-                <a href="#how-it-works">如何運作</a>
-                <a href="#disclaimer">安全聲明</a>
-                <a href="#" class="btn-download">立即下載</a>
+                <a href="#features">核心功能</a>
+                <a href="#privacy">隱私安全</a>
+                <a href="#analysis">智能分析</a>
+                <a href="#" class="btn-download">免費下載</a>
             </nav>
             <div class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
@@ -30,28 +32,29 @@
     </header>
 
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#features" onclick="toggleMenu()">功能特色</a>
-        <a href="#how-it-works" onclick="toggleMenu()">如何運作</a>
-        <a href="#disclaimer" onclick="toggleMenu()">安全聲明</a>
-        <a href="#" class="btn-download" onclick="toggleMenu()">立即下載</a>
+        <a href="#features" onclick="toggleMenu()">核心功能</a>
+        <a href="#privacy" onclick="toggleMenu()">隱私安全</a>
+        <a href="#analysis" onclick="toggleMenu()">智能分析</a>
+        <a href="#" class="btn-download" onclick="toggleMenu()">免費下載</a>
     </div>
 
     <main>
         <section class="hero-section">
             <div class="container hero-content">
                 <div class="hero-text">
-                    <h1>掌控你的減藥旅程<br>安全、緩慢、有條不紊</h1>
-                    <p>RxTaper 提供個人化的結構、AI 追蹤與數據洞察，陪伴你充滿信心地邁向不需要藥物的自由生活。</p>
+                    <span class="badge-new">AI 驅動 · 本地隱私 · 專業追蹤</span>
+                    <h1>安全、系統化的<br>減藥旅程夥伴</h1>
+                    <p>專為減藥追蹤設計。透過 AI 語音日記自動記錄「劑量、睡眠、穩定度」。讓數據成為您康復路上的溫柔嚮導。</p>
                     <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary"><i class="fab fa-apple"></i> App Store 下載</a>
-                        <a href="#" class="btn btn-outline"><i class="fab fa-android"></i> Google Play 下載</a>
+                        <a href="#" class="btn btn-primary"><i class="fab fa-apple"></i> App Store</a>
+                        <a href="#" class="btn btn-outline"><i class="fab fa-google-play"></i> Google Play</a>
                     </div>
                 </div>
                 <div class="hero-image">
                     <img src="app_screenshot.png" alt="RxTaper App Screenshot" class="app-screenshot">
                     <div class="app-placeholder">
-                        <i class="fas fa-chart-line"></i>
-                        <p>App 畫面示意圖</p>
+                        <i class="fas fa-wave-square"></i>
+                        <p>AI 智能分析介面</p>
                     </div>
                 </div>
             </div>
@@ -59,68 +62,112 @@
 
         <section id="features" class="features-section">
             <div class="container">
-                <span class="subtitle">你的溫柔嚮導</span>
-                <h2>RxTaper 如何協助你</h2>
+                <span class="subtitle">POWERFUL FEATURES</span>
+                <h2>全方位輔助您的減量計畫</h2>
                 <div class="feature-grid">
                     <div class="feature-card">
-                        <div class="icon-wrapper"><i class="fas fa-calendar-alt"></i></div>
-                        <h3>個人化減量計畫</h3>
-                        <p>輸入你的當前劑量與目標，建立符合你步調的科學化減量時間表。</p>
+                        <div class="icon-wrapper"><i class="fas fa-microphone-lines"></i></div>
+                        <h3>AI 語音智能日誌</h3>
+                        <p>不想打字？用說的就好。AI 自動將語音轉文字，並精準提取關鍵數據，快速生成每日摘要。</p>
                     </div>
                     <div class="feature-card">
-                        <div class="icon-wrapper"><i class="fas fa-microphone-alt"></i></div>
-                        <h3>AI 語音紀錄</h3>
-                        <p>直接用說的紀錄每日感受，AI 自動分析情緒與穩定度。</p>
+                        <div class="icon-wrapper"><i class="fas fa-triangle-exclamation"></i></div>
+                        <h3>黃金三角追蹤</h3>
+                        <p>同步分析「藥物劑量」、「睡眠時數」與「身心穩定度(1-5分)」，找出影響康復的關鍵因子。</p>
                     </div>
                     <div class="feature-card">
-                        <div class="icon-wrapper"><i class="fas fa-chart-line"></i></div>
-                        <h3>可視化進度</h3>
-                        <p>看著曲線緩慢下降是最大的動力。清晰呈現你的每一步進展。</p>
+                        <div class="icon-wrapper"><i class="fas fa-camera"></i></div>
+                        <h3>OCR 藥物辨識</h3>
+                        <p>內建 Google ML Kit 技術，相機一掃即可辨識藥單標籤。支援多種藥物管理與靈活單位(mg/錠)。</p>
                     </div>
                     <div class="feature-card">
-                        <div class="icon-wrapper"><i class="fas fa-pills"></i></div>
-                        <h3>庫存管理</h3>
-                        <p>準時服藥提醒，並追蹤剩餘藥量，確保你的計畫不中斷。</p>
+                        <div class="icon-wrapper"><i class="fas fa-chart-area"></i></div>
+                        <h3>視覺化趨勢圖表</h3>
+                        <p>透過「穩定度日曆」與趨勢圖，直觀檢視長期變化。看見進步，是堅持下去的最大動力。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="how-it-works" class="how-it-works-section">
+        <section id="privacy" class="privacy-section">
             <div class="container">
-                <span class="subtitle">簡單三步驟</span>
-                <h2>輕鬆掌控你的減藥旅程</h2>
+                <div class="privacy-content">
+                    <div class="privacy-text">
+                        <div class="icon-header">
+                            <i class="fas fa-shield-halved"></i>
+                            <h2>100% 本地儲存，隱私至上</h2>
+                        </div>
+                        <p>我們深知醫療數據的敏感性。RxTaper 採用 <strong>Drift (SQLite) 本地資料庫技術</strong>。</p>
+                        <ul class="check-list">
+                            <li><i class="fas fa-check-circle"></i> 所有日誌與藥物記錄僅儲存在您的手機中。</li>
+                            <li><i class="fas fa-check-circle"></i> 無需註冊帳號即可使用，資料不上傳雲端。</li>
+                            <li><i class="fas fa-check-circle"></i> 完全掌握自己的數據主權。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="analysis" class="analysis-section">
+            <div class="container">
+                <span class="subtitle">INTELLIGENT INSIGHTS</span>
+                <h2>Google Gemini AI 深度分析</h2>
+                <p class="section-desc">不僅僅是記錄，更提供專業的數據解讀與建議。</p>
+                
+                <div class="analysis-grid">
+                    <div class="analysis-item">
+                        <i class="fas fa-brain"></i>
+                        <h4>症狀評估</h4>
+                        <p>自動提取並標記潛在症狀，評估改善趨勢。</p>
+                    </div>
+                    <div class="analysis-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>策略建議</h4>
+                        <p>根據您的穩定度變化，提供下一步減量的安全建議。</p>
+                    </div>
+                    <div class="analysis-item">
+                        <i class="fas fa-triangle-exclamation"></i>
+                        <h4>風險識別</h4>
+                        <p>AI 主動識別戒斷反應風險，提醒您注意身心變化。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works-section">
+            <div class="container">
+                <h2>簡單三步，開始掌控生活</h2>
                 <div class="steps-grid">
                     <div class="step-card">
                         <div class="step-number">01</div>
-                        <h3>設定基準</h3>
-                        <p>告訴 RxTaper 你目前的藥物與劑量，並設定你的初步目標。</p>
+                        <h3>設定藥物</h3>
+                        <p>使用相機掃描或手動輸入，建立目前的用藥基準。</p>
                     </div>
                     <div class="step-card">
                         <div class="step-number">02</div>
-                        <h3>跟隨指引</h3>
-                        <p>每日接收服藥提醒，紀錄你的感受。AI 系統會根據反饋建議是否調整。</p>
+                        <h3>語音記錄</h3>
+                        <p>每天花一分鐘說話，AI 自動幫您整理成結構化圖表。</p>
                     </div>
                     <div class="step-card">
                         <div class="step-number">03</div>
-                        <h3>重獲自由</h3>
-                        <p>隨著時間推移，安全、緩慢地達到你的目標。回顧旅程，慶祝勝利。</p>
+                        <h3>分析調整</h3>
+                        <p>觀察穩定度趨勢，在 AI 輔助下安全地調整劑量。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="disclaimer" class="disclaimer-section">
+        <section class="cta-section">
             <div class="container">
-                <i class="fas fa-exclamation-triangle warning-icon"></i>
-                <h2>你的安全是我們的首要任務</h2>
-                <p>RxTaper 是一個強大的追蹤與輔助工具，旨在幫助你管理減藥過程。</p>
-                <p class="important-note">
-                    <strong>重要聲明：本應用程式不提供醫療建議、診斷或治療。</strong>
-                    任何藥物劑量的調整或減量計畫的制定，都**必須**在你的醫生或專業醫療人員的指導與監督下進行。請務必與你的醫生分享 App 中的數據以做出最佳決策。
-                </p>
+                <h2>準備好找回生活的掌控權了嗎？</h2>
+                <p>加入 RxTaper，讓科技守護您的每一步改變。</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">立即免費下載</a>
+                </div>
+                <p class="tech-stack-note">Powered by Flutter & Google Gemini</p>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
@@ -132,8 +179,8 @@
             <p>&copy; 2024 RxTaper. All rights reserved.</p>
             <div class="footer-links">
                 <a href="#">隱私權政策</a>
-                <a href="#">服務條款</a>
-                <a href="#">聯絡我們</a>
+                <a href="#">使用條款</a>
+                <a href="#">聯絡開發者</a>
             </div>
         </div>
     </footer>
@@ -147,25 +194,6 @@
                 mobileMenu.style.display = 'flex';
             }
         }
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href.startsWith('#')) {
-                    e.preventDefault();
-                    const targetElement = document.querySelector(href);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                        if (window.innerWidth <= 768 && href !== '#') { // Close mobile menu after clicking
-                            toggleMenu();
-                        }
-                    }
-                }
-            });
-        });
     </script>
 </body>
 </html>
