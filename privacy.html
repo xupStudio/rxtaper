@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隱私權政策 | RxTaper: AI減藥日記</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="app_icon_with_bg.png" type="image/png">
+    <link rel="apple-touch-icon" href="app_icon_with_bg.png">
+    
+    <style>
+        .policy-header {
+            padding-top: 120px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+        .policy-body {
+            background-color: var(--deep-navy-light);
+            padding: 60px;
+            border-radius: 24px;
+            margin-bottom: 80px;
+            border: 1px solid rgba(255,255,255,0.02);
+        }
+        .policy-body h2 {
+            text-align: left;
+            color: var(--mint-green);
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(78, 205, 196, 0.2);
+            padding-bottom: 10px;
+        }
+        .policy-body h3 {
+            font-size: 1.1rem;
+            color: var(--soft-sand-light);
+            margin-top: 24px;
+        }
+        .policy-body p, .policy-body li {
+            color: var(--soft-sand);
+            opacity: 0.9;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+        .policy-body ul {
+            padding-left: 24px;
+            margin-bottom: 24px;
+        }
+        .policy-body li {
+            margin-bottom: 8px;
+        }
+        .last-updated {
+            color: var(--soft-sand-dark);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        /* 針對手機版的調整 */
+        @media (max-width: 600px) {
+            .policy-body {
+                padding: 30px 20px;
+            }
+            .policy-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" style="display:flex; align-items:center; color:inherit;">
+                    <img src="app_icon.png" alt="RxTaper App Icon" class="app-icon">
+                    <span>RxTaper: AI減藥日記</span>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html#features">功能介紹</a>
+                <a href="index.html#disclaimer" class="nav-warning">重要聲明</a>
+                <a href="#" class="btn-download">免費下載</a>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" onclick="toggleMenu()">回首頁</a>
+        <a href="index.html#disclaimer" onclick="toggleMenu()">重要聲明</a>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="policy-header">
+                <h1>隱私權政策</h1>
+                <p class="last-updated">最後更新日期：2026年1月</p>
+            </div>
+
+            <div class="policy-body">
+                <p><strong>RxTaper: AI減藥日記</strong>（以下簡稱「本應用程式」）非常重視您的隱私權。本隱私權政策說明我們如何收集、使用、儲存及保護您的個人資訊與健康數據。</p>
+                
+                <p>當您下載、安裝或使用本應用程式時，即表示您同意本政策所述之內容。若您不同意本政策的任何部分，請立即停止使用本應用程式。</p>
+
+                <h2>1. 非醫療器材聲明</h2>
+                <p>在開始之前，我們必須再次強調：<strong>RxTaper 不是醫療器材，不提供任何醫療診斷、治療建議或用藥指導。</strong></p>
+                <p>本應用程式僅作為數位筆記工具，協助使用者記錄自身的感受與數據。所有由 AI 生成的摘要、圖表與數據分析僅供參考。請勿僅依賴本應用程式的資訊進行任何藥物劑量的調整。任何醫療決策皆應諮詢專業醫師。</p>
+
+                <h2>2. 我們收集的資料</h2>
+                <p>為了提供完整的追蹤服務，我們可能會處理以下類型的數據：</p>
+                <ul>
+                    <li><strong>使用者輸入的健康數據：</strong>包含但不限於藥物名稱、劑量、服用時間、身心感受記錄（文字或語音）、睡眠時數與主觀穩定度評分。</li>
+                    <li><strong>語音數據：</strong>當您使用「AI 語音日記」功能時，我們會存取您的麥克風權限以錄製音訊。</li>
+                    <li><strong>影像數據：</strong>當您使用「藥物標籤掃描」功能時，我們會存取您的相機權限以識別文字（OCR）。</li>
+                    <li><strong>技術數據：</strong>如裝置型號、作業系統版本、崩潰報告（Crash Logs），這些數據僅用於除錯與改善應用程式穩定性，不包含個人識別資訊。</li>
+                </ul>
+
+                <h2>3. 資料儲存與備份</h2>
+                <p>我們尊重您的數據自主權，提供靈活的儲存方式：</p>
+                <ul>
+                    <li><strong>本地儲存：</strong>在預設情況下，您的日記與健康數據將儲存於您裝置內部的資料庫（Local Database）。若您刪除應用程式，這些數據可能會隨之消失。</li>
+                    <li><strong>雲端備份與同步（選用功能）：</strong>若您選擇使用第三方帳戶（如 Google 或 Apple ID）登入並啟用備份功能，您的加密數據將會上傳至雲端伺服器。此舉是為了防止裝置遺失導致資料滅失，並讓您能在不同裝置間同步資料。</li>
+                </ul>
+
+                <h2>4. AI 技術與第三方服務</h2>
+                <p>本應用程式使用人工智慧技術（如 Google Gemini API）來提供語音轉文字、摘要整理與 OCR 識別功能。</p>
+                <ul>
+                    <li><strong>數據傳輸：</strong>為了進行分析，您的部分輸入內容（如語音片段或掃描的圖片）可能會加密傳輸至第三方 AI 服務供應商進行處理。</li>
+                    <li><strong>數據使用限制：</strong>我們承諾不會將您的個人健康數據出售給第三方。AI 服務供應商僅負責運算，且我們設定其不得將您的個人數據用於訓練通用模型。</li>
+                    <li><strong>準確性確認：</strong>由於 AI 可能產生幻覺或誤讀，所有由系統自動生成的文字與數據，<strong>皆須由使用者自行核對與確認</strong>後才會存入資料庫。</li>
+                </ul>
+
+                <h2>5. 資料安全</h2>
+                <p>我們採用符合業界標準的安全措施來保護您的資料：</p>
+                <ul>
+                    <li>應用程式內的敏感數據均經過加密處理。</li>
+                    <li>網路傳輸過程採用 TLS/SSL 加密協定。</li>
+                    <li>我們嚴格控管對伺服器與資料庫的存取權限。</li>
+                </ul>
+                <p>儘管我們致力於保護您的隱私，但請注意，網際網路上沒有任何傳輸方法或電子儲存方法是 100% 安全的。</p>
+
+                <h2>6. 您的權利</h2>
+                <p>您可以隨時行使以下權利：</p>
+                <ul>
+                    <li><strong>存取與匯出：</strong>您可以查看應用程式內的完整歷史記錄，並透過應用程式提供的功能匯出數據。</li>
+                    <li><strong>刪除：</strong>您可以隨時刪除特定日記條目。若您希望徹底刪除帳號及所有雲端備份數據，可透過應用程式內的設定選項執行，或聯絡我們進行處理。</li>
+                </ul>
+
+                <h2>7. 政策變更</h2>
+                <p>我們可能會不時更新本隱私權政策，以反映功能的變更或法律的要求。更新後的政策將公佈於本頁面，並更新上方的「最後更新日期」。建議您定期查閱本政策。</p>
+
+                <h2>8. 聯絡我們</h2>
+                <p>若您對本隱私權政策或 RxTaper 的數據處理方式有任何疑問，歡迎透過以下方式聯絡我們：</p>
+                <p>Email: <a href="mailto:xup654m42@gmail.com" style="color: var(--mint-green);">xup654m42@gmail.com</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="app_icon.png" alt="RxTaper App Icon" class="app-icon">
+                <span>RxTaper: AI減藥日記</span>
+            </div>
+            <p>&copy; 2026 RxTaper. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">隱私權政策</a>
+                <a href="#">服務條款 (EULA)</a>
+                <a href="#">聯絡我們</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu.style.display === 'flex') {
+                mobileMenu.style.display = 'none';
+            } else {
+                mobileMenu.style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+</html>
