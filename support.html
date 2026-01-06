@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Support - RxTaper</title>
+    <style>
+        :root {
+            --bg-color: #1a1a3a;      /* Deep Navy */
+            --text-color: #ffffff;    /* White */
+            --text-muted: #b0b0d0;    /* Light Blue-Grey */
+            --accent-color: #00E5FF;  /* Neon Cyan/Teal */
+            --card-bg: #25254d;       /* Lighter Navy for cards */
+            --divider: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 40px 0 20px 0;
+        }
+
+        .app-icon-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #00E5FF 0%, #007bb5 100%);
+            border-radius: 18px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-top: 5px;
+        }
+
+        /* Language Switcher */
+        .language-switch {
+            text-align: center;
+            margin: 20px 0 40px 0;
+        }
+
+        .btn-lang {
+            background: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--text-color);
+            padding: 5px 15px;
+            margin: 0 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .btn-lang.active, .btn-lang:hover {
+            background: var(--accent-color);
+            color: var(--bg-color);
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            flex-grow: 1;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        details {
+            background-color: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--divider);
+        }
+
+        summary {
+            padding: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none; /* Hide default triangle */
+            position: relative;
+            padding-right: 40px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details[open] summary {
+            background-color: rgba(0, 229, 255, 0.1);
+        }
+
+        .faq-content {
+            padding: 15px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--divider);
+        }
+        
+        /* Specific style for subscription lists */
+        .faq-content ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .faq-content li {
+            margin-bottom: 5px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+        }
+
+        .email-link {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--divider);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+    </style>
+    
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => el.style.display = 'none');
+            document.getElementById('content-' + lang).style.display = 'block';
+            
+            document.querySelectorAll('.btn-lang').forEach(el => el.classList.remove('active'));
+            document.getElementById('btn-' + lang).classList.add('active');
+        }
+    </script>
+</head>
+<body onload="switchLang('en')">
+
+<div class="container">
+    <header>
+        <div class="app-icon-placeholder">Rx</div>
+        <h1>RxTaper</h1>
+        <div class="subtitle">Support Center</div>
+    </header>
+
+    <div class="language-switch">
+        <button id="btn-en" class="btn-lang" onclick="switchLang('en')">English</button>
+        <button id="btn-zh" class="btn-lang" onclick="switchLang('zh')">中文 (Chinese)</button>
+    </div>
+
+    <div id="content-en" class="lang-content faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+            <summary>How do I cancel my subscription?</summary>
+            <div class="faq-content">
+                <p>Subscriptions are managed by your device's app store. We cannot cancel them for you.</p>
+                <strong>iOS (iPhone):</strong>
+                <ul>
+                    <li>Go to Settings > Tap your name > Subscriptions > RxTaper > Cancel Subscription.</li>
+                </ul>
+                <br>
+                <strong>Android:</strong>
+                <ul>
+                    <li>Open Google Play Store > Tap Profile Icon (top right) > Payments & subscriptions > Subscriptions > RxTaper > Cancel subscription.</li>
+                </ul>
+            </div>
+        </details>
+
+        <details>
+            <summary>Is my voice data saved?</summary>
+            <div class="faq-content">
+                No. Your voice is sent securely to our AI for transcription and summarization, but the raw audio file is not permanently stored on our servers after processing.
+            </div>
+        </details>
+
+        <details>
+            <summary>Can I export my data for my doctor?</summary>
+            <div class="faq-content">
+                Yes! Go to the "History" tab or the "Insights" page. You can view your stability trends and summaries which are designed to be shared with healthcare providers.
+            </div>
+        </details>
+
+        <details>
+            <summary>Is this app a replacement for a doctor?</summary>
+            <div class="faq-content">
+                Absolutely not. RxTaper is a tracking and journaling tool. Always consult your doctor before making any changes to your medication dosage.
+            </div>
+        </details>
+        
+        <div class="contact-section">
+            <h3>Still need help?</h3>
+            <p>Our team is here to assist you with any technical issues.</p>
+            <a href="mailto:xup654m42@gmail.com" class="email-link">xup654m42@gmail.com</a>
+        </div>
+    </div>
+
+    <div id="content-zh" class="lang-content faq-section" style="display: none;">
+        <h2>常見問題 (FAQ)</h2>
+
+        <details>
+            <summary>我該如何取消訂閱？</summary>
+            <div class="faq-content">
+                <p>訂閱服務由 Apple 或 Google 統一管理，我們無法直接為您取消。</p>
+                <strong>iOS (iPhone) 用戶：</strong>
+                <ul>
+                    <li>前往 iPhone 的「設定」> 點擊您的姓名 >「訂閱項目」> 選擇 RxTaper > 取消訂閱。</li>
+                </ul>
+                <br>
+                <strong>Android 用戶：</strong>
+                <ul>
+                    <li>開啟 Google Play 商店 > 點擊右上角個人頭像 > 付款與訂閱 > 訂閱內容 > 選擇 RxTaper > 取消訂閱。</li>
+                </ul>
+            </div>
+        </details>
+
+        <details>
+            <summary>我的語音檔案會被儲存嗎？</summary>
+            <div class="faq-content">
+                不會。您的錄音僅會加密傳送至 AI 進行轉錄與摘要，處理完成後，我們不會在伺服器上永久保存您的原始音訊檔案。
+            </div>
+        </details>
+
+        <details>
+            <summary>我可以匯出資料給醫生看嗎？</summary>
+            <div class="faq-content">
+                可以！請前往「歷史紀錄」或「洞察」頁面。我們的圖表與 AI 摘要專為醫病溝通設計，您可以直接出示手機畫面與醫師討論。
+            </div>
+        </details>
+
+        <details>
+            <summary>這個 App 可以取代醫生嗎？</summary>
+            <div class="faq-content">
+                絕對不行。RxTaper 僅作為紀錄與追蹤工具。在調整任何藥物劑量之前，請務必諮詢您的主治醫師。
+            </div>
+        </details>
+
+        <div class="contact-section">
+            <h3>還需要協助嗎？</h3>
+            <p>如果有任何技術問題或建議，歡迎聯繫我們。</p>
+            <a href="mailto:xup654m42@gmail.com" class="email-link">xup654m42@gmail.com</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 RxTaper. All rights reserved.</p>
+        <p>
+            <a href="privacy.html">Privacy Policy (隱私權政策)</a> | 
+            <a href="#">Terms of Use (使用條款)</a>
+        </p>
+    </footer>
+</div>
+
+</body>
+</html>
