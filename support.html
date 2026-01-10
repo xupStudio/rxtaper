@@ -14,32 +14,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        function switchLang(lang) {
-            document.querySelectorAll('.lang-content').forEach(el => el.style.display = 'none');
-            document.getElementById('content-' + lang).style.display = 'block';
-            
-            document.querySelectorAll('.btn-lang').forEach(el => el.classList.remove('active'));
-            document.getElementById('btn-' + lang).classList.add('active');
-        }
-    </script>
 </head>
-<body onload="switchLang('en')">
+<body>
     <div id="navbar-placeholder"></div>
 
 <main class="support-wrapper">
 <div class="container">
     <header>
-        <h1>Support Center</h1>
+        <h1 data-lang="en">Support Center</h1>
+        <h1 data-lang="zh" style="display:none;">技術支援中心</h1>
     </header>
 
-    <div class="language-switch">
-        <button id="btn-en" class="btn-lang" onclick="switchLang('en')">English</button>
-        <button id="btn-zh" class="btn-lang" onclick="switchLang('zh')">中文 (Chinese)</button>
-    </div>
-
-    <div id="content-en" class="lang-content faq-section">
+    <div id="content-en" class="lang-content faq-section" data-lang="en">
         <h2>Frequently Asked Questions</h2>
 
         <details>
@@ -86,7 +72,7 @@
         </div>
     </div>
 
-    <div id="content-zh" class="lang-content faq-section" style="display: none;">
+    <div id="content-zh" class="lang-content faq-section" data-lang="zh" style="display: none;">
         <h2>常見問題 (FAQ)</h2>
 
         <details>
@@ -146,10 +132,12 @@
     <div id="footer-placeholder"></div>
 
     <script src="js/config.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/common.js"></script>
     <script src="js/components.js"></script>
     <script>
-        // Initialize components for other pages
+        // Initialize language and components for other pages
+        const lang = initLanguage();
         initComponents(false);
     </script>
 </body>

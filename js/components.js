@@ -3,14 +3,19 @@
 /**
  * Generate navbar HTML
  * @param {boolean} isHomePage - Whether this is the home page
+ * @param {string} lang - Language code ('en' or 'zh')
  */
-function generateNavbar(isHomePage = false) {
-    const navLinks = isHomePage ? SITE_CONFIG.navLinks.home : SITE_CONFIG.navLinks.other;
+function generateNavbar(isHomePage = false, lang = 'zh') {
+    const navLinks = isHomePage 
+        ? SITE_CONFIG.navLinks.home[lang] 
+        : SITE_CONFIG.navLinks.other[lang];
     
     const navLinksHTML = navLinks.map(link => {
         const classAttr = link.class ? ` class="${link.class}"` : '';
         return `<a href="${link.href}"${classAttr}>${link.text}</a>`;
     }).join('\n                ');
+    
+    const siteName = SITE_CONFIG.name[lang];
     
     return `
     <header class="navbar">
@@ -18,7 +23,7 @@ function generateNavbar(isHomePage = false) {
             <div class="logo">
                 <a href="index.html" style="display:flex; align-items:center; color:inherit;">
                     <img src="${SITE_CONFIG.icon}" alt="RxTaper App Icon" class="app-icon">
-                    <span>${SITE_CONFIG.name}</span>
+                    <span>${siteName}</span>
                 </a>
             </div>
             <nav class="nav-links">
@@ -33,31 +38,37 @@ function generateNavbar(isHomePage = false) {
     <div class="mobile-menu" id="mobileMenu">
         ${isHomePage 
             ? navLinks.map(link => `<a href="${link.href}" onclick="toggleMenu()">${link.text}</a>`).join('\n        ')
-            : SITE_CONFIG.mobileMenuOther.map(link => `<a href="${link.href}" onclick="toggleMenu()">${link.text}</a>`).join('\n        ')
+            : SITE_CONFIG.mobileMenuOther[lang].map(link => `<a href="${link.href}" onclick="toggleMenu()">${link.text}</a>`).join('\n        ')
         }
     </div>`;
 }
 
 /**
  * Generate footer HTML
+ * @param {string} lang - Language code ('en' or 'zh')
  */
-function generateFooter() {
-    const footerLinksHTML = SITE_CONFIG.footerLinks.map(link => 
+function generateFooter(lang = 'zh') {
+    const footerLinksHTML = SITE_CONFIG.footerLinks[lang].map(link => 
         `<a href="${link.href}">${link.text}</a>`
     ).join('\n                ');
+    
+    const siteName = SITE_CONFIG.name[lang];
+    const legalFooter = lang === 'zh' 
+        ? '此網站僅為產品介紹，實際功能以 App 內版本與條款為主。'
+        : 'This website is for product introduction only. Actual features are subject to the in-app version and terms.';
     
     return `
     <footer class="footer">
         <div class="container">
             <div class="footer-logo">
                 <img src="${SITE_CONFIG.icon}" alt="RxTaper App Icon" class="app-icon">
-                <span>${SITE_CONFIG.name}</span>
+                <span>${siteName}</span>
             </div>
             <p>&copy; ${SITE_CONFIG.year} RxTaper. All rights reserved.</p>
             <div class="footer-links">
                 ${footerLinksHTML}
             </div>
-            <p class="legal-footer">此網站僅為產品介紹，實際功能以 App 內版本與條款為主。</p>
+            <p class="legal-footer">${legalFooter}</p>
         </div>
     </footer>`;
 }
@@ -90,16 +101,24 @@ function generateHead(title) {
  * @param {boolean} isHomePage - Whether this is the home page
  */
 function initComponents(isHomePage = false) {
+    // Get current language - i18n.js should be loaded first
+    let lang = 'zh'; // Default
+    if (typeof getCurrentLanguage === 'function') {
+        lang = getCurrentLanguage();
+    } else if (typeof detectLanguage === 'function') {
+        lang = detectLanguage();
+    }
+    
     // Insert navbar
     const navbarPlaceholder = document.getElementById('navbar-placeholder');
     if (navbarPlaceholder) {
-        navbarPlaceholder.innerHTML = generateNavbar(isHomePage);
+        navbarPlaceholder.innerHTML = generateNavbar(isHomePage, lang);
     }
     
     // Insert footer
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
-        footerPlaceholder.innerHTML = generateFooter();
+        footerPlaceholder.innerHTML = generateFooter(lang);
     }
 }
 

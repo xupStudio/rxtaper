@@ -22,15 +22,11 @@
 <div class="container">
     <header>
         <h1>RxTaper</h1>
-        <p class="subtitle">Terms of Use & End User License Agreement (EULA)</p>
+        <p class="subtitle" data-lang="en">Terms of Use & End User License Agreement (EULA)</p>
+        <p class="subtitle" data-lang="zh" style="display:none;">使用條款與最終用戶授權協議 (EULA)</p>
     </header>
 
-    <div class="language-switch">
-        <button class="btn" onclick="document.getElementById('zh').style.display='none';document.getElementById('en').style.display='block';">English</button>
-        <button class="btn" onclick="document.getElementById('en').style.display='none';document.getElementById('zh').style.display='block';">中文 (Chinese)</button>
-    </div>
-
-    <div id="en">
+    <div id="en" data-lang="en">
         <h2>Terms of Use</h2>
         <p><strong>Last Updated:</strong> January 2026</p>
         
@@ -65,7 +61,7 @@
         <p>If you have any questions or suggestions about our Terms of Use, do not hesitate to contact us at <strong>xup654m42@gmail.com</strong>.</p>
     </div>
 
-    <div id="zh" style="display: none;">
+    <div id="zh" data-lang="zh" style="display: none;">
         <h2>使用條款 (EULA)</h2>
         <p><strong>最後更新：</strong> 2026年1月</p>
 
@@ -113,10 +109,12 @@
     <div id="footer-placeholder"></div>
 
     <script src="js/config.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/common.js"></script>
     <script src="js/components.js"></script>
     <script>
-        // Initialize components for other pages
+        // Initialize language and components for other pages
+        const lang = initLanguage();
         initComponents(false);
     </script>
 </body>

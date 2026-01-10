@@ -234,15 +234,49 @@ section { padding: 80px 0; }
 .cta-buttons { display: flex; gap: 16px; margin-top: 32px; }
 
 .hero-image { flex: 1; display: flex; justify-content: center; }
-.app-placeholder {
-    width: 280px; height: 560px;
-    background: var(--deep-navy-light);
-    border-radius: 40px;
-    border: 8px solid var(--deep-navy-dark);
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+
+/* Carousel Styles */
+.app-carousel {
+    width: 280px;
+    height: 560px;
+    position: relative;
 }
-.app-placeholder i { font-size: 4rem; color: var(--mint-green); margin-bottom: 20px; opacity: 0.5; }
+
+.carousel-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    overflow: hidden;
+    background: transparent;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* Carousel dots removed */
+
 .app-screenshot { display: none; width: 100%; max-width: 280px; border-radius: 40px; }
 
 /* Trust Bar */
@@ -375,7 +409,14 @@ section { padding: 80px 0; }
 @media (max-width: 600px) {
     h1 { font-size: 2rem; }
     .trust-grid { flex-direction: column; align-items: center; }
-    .app-placeholder { width: 100%; max-width: 260px; height: 500px; }
+    .app-carousel {
+        width: 100%;
+        max-width: 260px;
+        height: 500px;
+    }
+    .carousel-container {
+        border-radius: 32px;
+    }
     .disclaimer-border { padding: 24px; }
     .btn { width: 100%; }
     .cta-buttons { flex-direction: column; }

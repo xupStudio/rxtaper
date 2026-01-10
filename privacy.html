@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隱私權政策 | RxTaper: AI減藥日記</title>
+    <title>隱私權政策 | RxTaper: AI減藥追蹤日記</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/pages.css">
     <link rel="icon" href="app_icon_with_bg.png" type="image/png">
@@ -26,7 +26,7 @@
             </div>
 
             <div class="policy-body">
-                <p><strong>RxTaper: AI減藥日記</strong>（以下簡稱「本應用程式」）非常重視您的隱私權。本隱私權政策說明我們如何收集、使用、儲存及保護您的個人資訊與健康數據。</p>
+                <p><strong>RxTaper: AI減藥追蹤日記</strong>（以下簡稱「本應用程式」）非常重視您的隱私權。本隱私權政策說明我們如何收集、使用、儲存及保護您的個人資訊與健康數據。</p>
                 
                 <p>當您下載、安裝或使用本應用程式時，即表示您同意本政策所述之內容。若您不同意本政策的任何部分，請立即停止使用本應用程式。</p>
 
@@ -87,10 +87,12 @@
     <div id="footer-placeholder"></div>
 
     <script src="js/config.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/common.js"></script>
     <script src="js/components.js"></script>
     <script>
-        // Initialize components for other pages
+        // Initialize language and components for other pages
+        const lang = initLanguage();
         initComponents(false);
     </script>
 </body>

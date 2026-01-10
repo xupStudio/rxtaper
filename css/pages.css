@@ -120,11 +120,7 @@
     color: #ffcccc;
 }
 
-.terms-wrapper .language-switch {
-    text-align: right;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
+/* Language switch removed - using auto-detection */
 
 .terms-wrapper .btn {
     background-color: transparent;
@@ -208,29 +204,7 @@
     margin-top: 5px;
 }
 
-.support-wrapper .language-switch {
-    text-align: center;
-    margin: 20px 0 40px 0;
-}
-
-.support-wrapper .btn-lang {
-    background: transparent;
-    border: 1px solid var(--mint-green);
-    color: var(--soft-sand);
-    padding: 5px 15px;
-    margin: 0 5px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.2s;
-}
-
-.support-wrapper .btn-lang.active,
-.support-wrapper .btn-lang:hover {
-    background: var(--mint-green);
-    color: var(--deep-navy);
-    font-weight: bold;
-}
+/* Language switch removed - using auto-detection */
 
 .support-wrapper .faq-section {
     flex-grow: 1;
