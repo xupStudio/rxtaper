@@ -5,97 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>隱私權政策 | RxTaper: AI減藥日記</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="icon" href="app_icon_with_bg.png" type="image/png">
+    <link rel="apple-touch-icon" href="app_icon_with_bg.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="app_icon_with_bg.png" type="image/png">
-    <link rel="apple-touch-icon" href="app_icon_with_bg.png">
-    
-    <style>
-        .policy-header {
-            padding-top: 120px;
-            padding-bottom: 40px;
-            text-align: center;
-        }
-        .policy-body {
-            background-color: var(--deep-navy-light);
-            padding: 60px;
-            border-radius: 24px;
-            margin-bottom: 80px;
-            border: 1px solid rgba(255,255,255,0.02);
-        }
-        .policy-body h2 {
-            text-align: left;
-            color: var(--mint-green);
-            font-size: 1.5rem;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid rgba(78, 205, 196, 0.2);
-            padding-bottom: 10px;
-        }
-        .policy-body h3 {
-            font-size: 1.1rem;
-            color: var(--soft-sand-light);
-            margin-top: 24px;
-        }
-        .policy-body p, .policy-body li {
-            color: var(--soft-sand);
-            opacity: 0.9;
-            margin-bottom: 16px;
-            text-align: justify;
-        }
-        .policy-body ul {
-            padding-left: 24px;
-            margin-bottom: 24px;
-        }
-        .policy-body li {
-            margin-bottom: 8px;
-        }
-        .last-updated {
-            color: var(--soft-sand-dark);
-            font-size: 0.9rem;
-            margin-top: 10px;
-        }
-        
-        /* 針對手機版的調整 */
-        @media (max-width: 600px) {
-            .policy-body {
-                padding: 30px 20px;
-            }
-            .policy-header h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
 </head>
 <body>
-
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html" style="display:flex; align-items:center; color:inherit;">
-                    <img src="app_icon.png" alt="RxTaper App Icon" class="app-icon">
-                    <span>RxTaper: AI減藥日記</span>
-                </a>
-            </div>
-            <nav class="nav-links">
-                <a href="index.html#features">功能介紹</a>
-                <a href="index.html#disclaimer" class="nav-warning">重要聲明</a>
-                <a href="#" class="btn-download">免費下載</a>
-            </nav>
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </header>
-
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html" onclick="toggleMenu()">回首頁</a>
-        <a href="index.html#disclaimer" onclick="toggleMenu()">重要聲明</a>
-    </div>
+    <div id="navbar-placeholder"></div>
 
     <main>
         <div class="container">
@@ -163,30 +84,14 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-logo">
-                <img src="app_icon.png" alt="RxTaper App Icon" class="app-icon">
-                <span>RxTaper: AI減藥日記</span>
-            </div>
-            <p>&copy; 2026 RxTaper. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#">隱私權政策</a>
-                <a href="#">服務條款 (EULA)</a>
-                <a href="#">聯絡我們</a>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
+    <script src="js/config.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/components.js"></script>
     <script>
-        function toggleMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            if (mobileMenu.style.display === 'flex') {
-                mobileMenu.style.display = 'none';
-            } else {
-                mobileMenu.style.display = 'flex';
-            }
-        }
+        // Initialize components for other pages
+        initComponents(false);
     </script>
 </body>
 </html>

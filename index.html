@@ -7,6 +7,7 @@
     <title>RxTaper: AI減藥日記</title>
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pages.css">
     <link rel="icon" href="app_icon_with_bg.png" type="image/png">
     <link rel="apple-touch-icon" href="app_icon_with_bg.png">
     
@@ -17,30 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="app_icon.png" alt="RxTaper App Icon" class="app-icon">
-                <span>RxTaper: AI減藥日記</span>
-            </div>
-            <nav class="nav-links">
-                <a href="#features">功能介紹</a>
-                <a href="privacy.html">隱私保護</a>
-                <a href="#disclaimer" class="nav-warning">重要聲明</a>
-                <a href="#" class="btn-download">免費下載</a>
-            </nav>
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </header>
-
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#features" onclick="toggleMenu()">功能介紹</a>
-        <a href="privacy.html" onclick="toggleMenu()">隱私保護</a>
-        <a href="#disclaimer" onclick="toggleMenu()">重要聲明</a>
-        <a href="#" class="btn-download" onclick="toggleMenu()">免費下載</a>
-    </div>
+    <div id="navbar-placeholder"></div>
 
     <main>
         <section class="hero-section">
@@ -159,31 +137,14 @@
 
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-logo">
-                <img src="app_icon.png" alt="RxTaper App Icon" class="app-icon">
-                <span>RxTaper: AI減藥日記</span>
-            </div>
-            <p>&copy; 2026 RxTaper. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="privacy.html">隱私權政策</a>
-                <a href="terms.html">服務條款 (EULA)</a>
-                <a href="support.html">技術支援</a>
-            </div>
-            <p class="legal-footer">此網站僅為產品介紹，實際功能以 App 內版本與條款為主。</p>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
+    <script src="js/config.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/components.js"></script>
     <script>
-        function toggleMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            if (mobileMenu.style.display === 'flex') {
-                mobileMenu.style.display = 'none';
-            } else {
-                mobileMenu.style.display = 'flex';
-            }
-        }
+        // Initialize components for home page
+        initComponents(true);
     </script>
 </body>
 </html>

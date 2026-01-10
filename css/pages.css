@@ -1,0 +1,356 @@
+/* Page-specific styles for RxTaper website */
+
+/* =========================================
+   Privacy Policy Page Styles
+   ========================================= */
+.policy-header {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.policy-body {
+    background-color: var(--deep-navy-light);
+    padding: 60px;
+    border-radius: 24px;
+    margin-bottom: 80px;
+    border: 1px solid rgba(255,255,255,0.02);
+}
+
+.policy-body h2 {
+    text-align: left;
+    color: var(--mint-green);
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(78, 205, 196, 0.2);
+    padding-bottom: 10px;
+}
+
+.policy-body h3 {
+    font-size: 1.1rem;
+    color: var(--soft-sand-light);
+    margin-top: 24px;
+}
+
+.policy-body p, 
+.policy-body li {
+    color: var(--soft-sand);
+    opacity: 0.9;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.policy-body ul {
+    padding-left: 24px;
+    margin-bottom: 24px;
+}
+
+.policy-body li {
+    margin-bottom: 8px;
+}
+
+.last-updated {
+    color: var(--soft-sand-dark);
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* =========================================
+   Terms of Use Page Styles
+   ========================================= */
+.terms-wrapper {
+    background-color: var(--deep-navy);
+    color: var(--soft-sand);
+    padding-top: 120px;
+}
+
+.terms-wrapper .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.terms-wrapper header {
+    text-align: center;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.terms-wrapper h1 {
+    color: var(--mint-green);
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.terms-wrapper .subtitle {
+    color: var(--soft-sand-dark);
+    font-size: 0.9rem;
+}
+
+.terms-wrapper h2 {
+    color: var(--mint-green);
+    margin-top: 35px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.terms-wrapper h3 {
+    color: var(--soft-sand-light);
+    margin-top: 25px;
+}
+
+.terms-wrapper p,
+.terms-wrapper li {
+    color: var(--soft-sand);
+    margin-bottom: 15px;
+}
+
+.terms-wrapper ul {
+    padding-left: 20px;
+}
+
+.terms-wrapper .warning-box {
+    background-color: rgba(255, 80, 80, 0.1);
+    border: 1px solid var(--error-red);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    color: #ffcccc;
+}
+
+.terms-wrapper .language-switch {
+    text-align: right;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.terms-wrapper .btn {
+    background-color: transparent;
+    border: 1px solid var(--mint-green);
+    color: var(--mint-green);
+    padding: 6px 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.terms-wrapper .btn:hover {
+    background-color: var(--mint-green);
+    color: var(--deep-navy);
+}
+
+.terms-wrapper footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.8rem;
+    color: var(--soft-sand-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+}
+
+.terms-wrapper footer a {
+    color: var(--soft-sand-dark);
+    text-decoration: underline;
+    margin: 0 10px;
+}
+
+/* =========================================
+   Support Page Styles
+   ========================================= */
+.support-wrapper {
+    background-color: var(--deep-navy);
+    color: var(--soft-sand);
+    line-height: 1.6;
+    padding-top: 120px;
+}
+
+.support-wrapper .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.support-wrapper header {
+    text-align: center;
+    padding: 40px 0 20px 0;
+}
+
+.app-icon-placeholder {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--mint-green) 0%, var(--mint-green-dark) 100%);
+    border-radius: 18px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+}
+
+.support-wrapper h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+
+.support-wrapper .subtitle {
+    color: var(--mint-green);
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.support-wrapper .language-switch {
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+
+.support-wrapper .btn-lang {
+    background: transparent;
+    border: 1px solid var(--mint-green);
+    color: var(--soft-sand);
+    padding: 5px 15px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.support-wrapper .btn-lang.active,
+.support-wrapper .btn-lang:hover {
+    background: var(--mint-green);
+    color: var(--deep-navy);
+    font-weight: bold;
+}
+
+.support-wrapper .faq-section {
+    flex-grow: 1;
+}
+
+.support-wrapper h2 {
+    border-bottom: 2px solid var(--mint-green);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.support-wrapper details {
+    background-color: var(--deep-navy-light);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.support-wrapper summary {
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    position: relative;
+    padding-right: 40px;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.support-wrapper summary::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: var(--mint-green);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.support-wrapper details[open] summary::after {
+    content: '-';
+}
+
+.support-wrapper details[open] summary {
+    background-color: rgba(78, 205, 196, 0.1);
+}
+
+.support-wrapper .faq-content {
+    padding: 15px;
+    color: var(--soft-sand-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.support-wrapper .faq-content ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.support-wrapper .faq-content li {
+    margin-bottom: 5px;
+}
+
+.support-wrapper .contact-section {
+    text-align: center;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: var(--deep-navy-light);
+    border-radius: 12px;
+}
+
+.support-wrapper .email-link {
+    color: var(--mint-green);
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.support-wrapper footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--soft-sand-dark);
+    font-size: 0.85rem;
+}
+
+.support-wrapper footer a {
+    color: var(--soft-sand-dark);
+    text-decoration: underline;
+    margin: 0 10px;
+}
+
+.support-wrapper footer a:hover {
+    color: var(--mint-green);
+}
+
+/* =========================================
+   Responsive Styles for Pages
+   ========================================= */
+@media (max-width: 600px) {
+    .policy-body {
+        padding: 30px 20px;
+    }
+    
+    .policy-header h1 {
+        font-size: 2rem;
+    }
+    
+    .terms-wrapper h1 {
+        font-size: 1.8rem;
+    }
+    
+    .support-wrapper h1 {
+        font-size: 1.5rem;
+    }
+}
+

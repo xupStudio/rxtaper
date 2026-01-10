@@ -3,145 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Terms of Use - RxTaper</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="icon" href="app_icon_with_bg.png" type="image/png">
+    <link rel="apple-touch-icon" href="app_icon_with_bg.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="app_icon_with_bg.png" type="image/png">
-    <link rel="apple-touch-icon" href="app_icon_with_bg.png">
-
-    <title>Terms of Use - RxTaper</title>
-    <style>
-        /* 專屬於 terms 內容區的樣式，避免影響共用 navbar */
-        .terms-wrapper {
-            background-color: #1a1a3a; /* Deep Navy */
-            color: #ffffff;
-            padding-top: 120px; /* 避開固定 navbar，高度與 privacy 頁一致 */
-        }
-
-        .terms-wrapper .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .terms-wrapper header {
-            text-align: center;
-            padding: 40px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .terms-wrapper h1 {
-            color: #00E5FF;
-            font-size: 2.2rem;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
-
-        .terms-wrapper .subtitle {
-            color: #ccc;
-            font-size: 0.9rem;
-        }
-
-        .terms-wrapper h2 {
-            color: #00E5FF;
-            margin-top: 35px;
-            padding-bottom: 5px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .terms-wrapper h3 {
-            color: #e0e0e0;
-            margin-top: 25px;
-        }
-
-        .terms-wrapper p,
-        .terms-wrapper li {
-            color: #d1d1d1;
-            margin-bottom: 15px;
-        }
-
-        .terms-wrapper ul {
-            padding-left: 20px;
-        }
-
-        /* Highlight Important Disclaimers */
-        .terms-wrapper .warning-box {
-            background-color: rgba(255, 80, 80, 0.1);
-            border: 1px solid #ff5050;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-            color: #ffcccc;
-        }
-
-        .terms-wrapper .language-switch {
-            text-align: right;
-            margin-bottom: 20px;
-            margin-top: 20px;
-        }
-
-        .terms-wrapper .btn {
-            background-color: transparent;
-            border: 1px solid #00E5FF;
-            color: #00E5FF;
-            padding: 6px 14px;
-            cursor: pointer;
-            border-radius: 20px;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-
-        .terms-wrapper .btn:hover {
-            background-color: #00E5FF;
-            color: #1a1a3a;
-        }
-
-        .terms-wrapper footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.8rem;
-            color: #888;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 40px;
-        }
-        
-        .terms-wrapper footer a {
-            color: #888;
-            text-decoration: underline;
-            margin: 0 10px;
-        }
-    </style>
 </head>
 <body>
-
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html" style="display:flex; align-items:center; color:inherit;">
-                    <img src="app_icon.png" alt="RxTaper App Icon" class="app-icon">
-                    <span>RxTaper: AI減藥日記</span>
-                </a>
-            </div>
-            <nav class="nav-links">
-                <a href="index.html#features">功能介紹</a>
-                <a href="index.html#disclaimer" class="nav-warning">重要聲明</a>
-                <a href="#" class="btn-download">免費下載</a>
-            </nav>
-            <div class="hamburger" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </header>
-
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html" onclick="toggleMenu()">回首頁</a>
-        <a href="index.html#disclaimer" onclick="toggleMenu()">重要聲明</a>
-    </div>
+    <div id="navbar-placeholder"></div>
 
 <main class="terms-wrapper">
 <div class="container">
@@ -232,19 +107,17 @@
             <a href="support.html">App Support</a>
         </p>
     </footer>
-</div>
+    </div>
 </main>
 
-    <script>
-        function toggleMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            if (mobileMenu.style.display === 'flex') {
-                mobileMenu.style.display = 'none';
-            } else {
-                mobileMenu.style.display = 'flex';
-            }
-        }
-    </script>
+    <div id="footer-placeholder"></div>
 
+    <script src="js/config.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+        // Initialize components for other pages
+        initComponents(false);
+    </script>
 </body>
 </html>
