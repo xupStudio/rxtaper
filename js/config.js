@@ -19,25 +19,25 @@ const SITE_CONFIG = {
                 { text: '功能介紹', href: '#features' },
                 { text: '隱私保護', href: 'privacy.html' },
                 { text: '重要聲明', href: '#disclaimer', class: 'nav-warning' },
-                { text: '免費下載', href: '#', class: 'btn-download' }
+                { text: '免費下載', href: '#download', class: 'btn-download' }
             ],
             en: [
                 { text: 'Features', href: '#features' },
                 { text: 'Privacy', href: 'privacy.html' },
                 { text: 'Disclaimer', href: '#disclaimer', class: 'nav-warning' },
-                { text: 'Download', href: '#', class: 'btn-download' }
+                { text: 'Download', href: '#download', class: 'btn-download' }
             ]
         },
         other: {
             zh: [
                 { text: '功能介紹', href: 'index.html#features' },
                 { text: '重要聲明', href: 'index.html#disclaimer', class: 'nav-warning' },
-                { text: '免費下載', href: '#', class: 'btn-download' }
+                { text: '免費下載', href: 'index.html#download', class: 'btn-download' }
             ],
             en: [
                 { text: 'Features', href: 'index.html#features' },
                 { text: 'Disclaimer', href: 'index.html#disclaimer', class: 'nav-warning' },
-                { text: 'Download', href: '#', class: 'btn-download' }
+                { text: 'Download', href: 'index.html#download', class: 'btn-download' }
             ]
         }
     },

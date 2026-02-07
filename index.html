@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>RxTaper: AI減藥追蹤日記</title>
-    
+    <meta name="description" content="RxTaper 是一個強大的數據記錄工具。透過 AI 語音轉文字與視覺化圖表，協助您精確記錄劑量與感受，為您的醫療諮詢提供可靠數據。">
+
+    <link rel="icon" href="app_icon_with_bg.png" type="image/png">
+    <link rel="shortcut icon" href="app_icon_with_bg.png" type="image/png">
+    <link rel="apple-touch-icon" href="app_icon_with_bg.png">
+    <link rel="icon" href="app_icon_with_bg.png" sizes="32x32">
+    <link rel="icon" href="app_icon_with_bg.png" sizes="192x192">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/pages.css">
-    <link rel="icon" href="app_icon_with_bg.png" type="image/png">
-    <link rel="apple-touch-icon" href="app_icon_with_bg.png">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div id="navbar-placeholder"></div>
 
@@ -25,17 +34,24 @@
             <div class="container hero-content">
                 <div class="hero-text">
                     <span class="badge-safe" data-lang="zh">非醫療診斷軟體 · 重視隱私保護</span>
-                    <span class="badge-safe" data-lang="en" style="display:none;">Not a Medical Device · Privacy First</span>
+                    <span class="badge-safe" data-lang="en" style="display:none;">Not a Medical Device · Privacy
+                        First</span>
                     <h1 data-lang="zh">掌握數據，協助您與醫生<br>規劃減藥旅程</h1>
-                    <h1 data-lang="en" style="display:none;">Track Your Data, Assist You and Your Doctor<br>Plan Your Tapering Journey</h1>
+                    <h1 data-lang="en" style="display:none;">Track Your Data, Assist You and Your Doctor<br>Plan Your
+                        Tapering Journey</h1>
                     <p data-lang="zh">RxTaper 是一個強大的數據記錄工具。透過 AI 語音轉文字與視覺化圖表，協助您精確記錄劑量與感受，為您的醫療諮詢提供可靠數據。</p>
-                    <p data-lang="en" style="display:none;">RxTaper is a powerful data tracking tool. Through AI voice-to-text and visual charts, it helps you accurately record dosages and feelings, providing reliable data for your medical consultations.</p>
-                    <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary"><i class="fab fa-apple"></i> App Store</a>
-                        <a href="#" class="btn btn-outline"><i class="fab fa-google-play"></i> Google Play</a>
+                    <p data-lang="en" style="display:none;">RxTaper is a powerful data tracking tool. Through AI
+                        voice-to-text and visual charts, it helps you accurately record dosages and feelings, providing
+                        reliable data for your medical consultations.</p>
+                    <div class="cta-buttons" id="download">
+                        <a href="https://apps.apple.com/us/app/rxtaper-ai-tapering-diary/id6757333483"
+                            class="btn btn-primary"><i class="fab fa-apple"></i> App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.xupstudio.rxtaper&hl=zh_TW"
+                            class="btn btn-outline"><i class="fab fa-google-play"></i> Google Play</a>
                     </div>
                     <p class="legal-note-small" data-lang="zh">* 使用前請詳閱免責聲明。本 App 不提供醫療建議。</p>
-                    <p class="legal-note-small" data-lang="en" style="display:none;">* Please read the disclaimer before use. This app does not provide medical advice.</p>
+                    <p class="legal-note-small" data-lang="en" style="display:none;">* Please read the disclaimer before
+                        use. This app does not provide medical advice.</p>
                 </div>
                 <div class="hero-image">
                     <div class="app-carousel">
@@ -122,28 +138,34 @@
                         <h3 data-lang="zh">AI 語音日誌</h3>
                         <h3 data-lang="en" style="display:none;">AI Voice Journal</h3>
                         <p data-lang="zh">透過語音轉文字技術，輕鬆記錄每日感受。AI 協助提取關鍵字，並需由您確認後存檔，確保記錄準確。</p>
-                        <p data-lang="en" style="display:none;">Easily record your daily feelings through voice-to-text technology. AI helps extract keywords, and you need to confirm before saving to ensure accuracy.</p>
+                        <p data-lang="en" style="display:none;">Easily record your daily feelings through voice-to-text
+                            technology. AI helps extract keywords, and you need to confirm before saving to ensure
+                            accuracy.</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon-wrapper"><i class="fas fa-chart-line"></i></div>
                         <h3 data-lang="zh">趨勢視覺化</h3>
                         <h3 data-lang="en" style="display:none;">Trend Visualization</h3>
                         <p data-lang="zh">將您的「劑量」、「睡眠」與「穩定度」繪製成圖表。讓您與醫生能一目了然地看見長期變化趨勢。</p>
-                        <p data-lang="en" style="display:none;">Visualize your dosage, sleep, and stability in charts. You and your doctor can see long-term trends at a glance.</p>
+                        <p data-lang="en" style="display:none;">Visualize your dosage, sleep, and stability in charts.
+                            You and your doctor can see long-term trends at a glance.</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon-wrapper"><i class="fas fa-camera"></i></div>
                         <h3 data-lang="zh">藥物標籤掃描</h3>
                         <h3 data-lang="en" style="display:none;">Medication Label Scan</h3>
                         <p data-lang="zh">內建 OCR 技術輔助輸入藥物資訊。支援多種藥物管理，讓繁瑣的劑量記錄變得井然有序。</p>
-                        <p data-lang="en" style="display:none;">Built-in OCR technology assists in entering medication information. Supports multiple medication management, making tedious dosage recording organized.</p>
+                        <p data-lang="en" style="display:none;">Built-in OCR technology assists in entering medication
+                            information. Supports multiple medication management, making tedious dosage recording
+                            organized.</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon-wrapper"><i class="fas fa-brain"></i></div>
                         <h3 data-lang="zh">數據洞察</h3>
                         <h3 data-lang="en" style="display:none;">Data Insights</h3>
                         <p data-lang="zh">系統根據您的歷史記錄整理出數據摘要，幫助您自我覺察身心變化模式。</p>
-                        <p data-lang="en" style="display:none;">The system compiles data summaries based on your history, helping you become aware of physical and mental change patterns.</p>
+                        <p data-lang="en" style="display:none;">The system compiles data summaries based on your
+                            history, helping you become aware of physical and mental change patterns.</p>
                     </div>
                 </div>
             </div>
@@ -156,8 +178,12 @@
                     <div class="warning-text">
                         <h3 data-lang="zh">關於 AI 技術的限制</h3>
                         <h3 data-lang="en" style="display:none;">About AI Technology Limitations</h3>
-                        <p data-lang="zh">本應用程式使用 Google Gemini AI 進行語言處理與摘要。AI 可能會產生不準確的資訊（幻覺）。所有自動生成的摘要與數據，<strong>皆須由使用者自行核對確認</strong>。請勿完全依賴 AI 判讀。</p>
-                        <p data-lang="en" style="display:none;">This app uses Google Gemini AI for language processing and summarization. AI may produce inaccurate information (hallucinations). All auto-generated summaries and data <strong>must be verified by users</strong>. Do not rely entirely on AI interpretation.</p>
+                        <p data-lang="zh">本應用程式使用 Google Gemini AI 進行語言處理與摘要。AI
+                            可能會產生不準確的資訊（幻覺）。所有自動生成的摘要與數據，<strong>皆須由使用者自行核對確認</strong>。請勿完全依賴 AI 判讀。</p>
+                        <p data-lang="en" style="display:none;">This app uses Google Gemini AI for language processing
+                            and summarization. AI may produce inaccurate information (hallucinations). All
+                            auto-generated summaries and data <strong>must be verified by users</strong>. Do not rely
+                            entirely on AI interpretation.</p>
                     </div>
                 </div>
             </div>
@@ -173,14 +199,23 @@
                             <h2 data-lang="en" style="display:none;">Your Data, Secure and Safe</h2>
                         </div>
                         <p data-lang="zh">RxTaper 致力於保護您的個人健康資訊。我們採用嚴格的數據處理標準，讓您能安心記錄。</p>
-                        <p data-lang="en" style="display:none;">RxTaper is committed to protecting your personal health information. We adopt strict data processing standards so you can record with peace of mind.</p>
+                        <p data-lang="en" style="display:none;">RxTaper is committed to protecting your personal health
+                            information. We adopt strict data processing standards so you can record with peace of mind.
+                        </p>
                         <ul class="check-list">
-                            <li data-lang="zh"><i class="fas fa-check"></i> <strong>安全加密：</strong> 您的健康日記與藥物記錄均經過加密處理，確保資料安全。</li>
-                            <li data-lang="en" style="display:none;"><i class="fas fa-check"></i> <strong>Secure Encryption：</strong> Your health diary and medication records are encrypted to ensure data security.</li>
+                            <li data-lang="zh"><i class="fas fa-check"></i> <strong>安全加密：</strong>
+                                您的健康日記與藥物記錄均經過加密處理，確保資料安全。</li>
+                            <li data-lang="en" style="display:none;"><i class="fas fa-check"></i> <strong>Secure
+                                    Encryption：</strong> Your health diary and medication records are encrypted to
+                                ensure data security.</li>
                             <li data-lang="zh"><i class="fas fa-check"></i> <strong>數據自主：</strong> 您擁有數據的完全所有權與控制權。</li>
-                            <li data-lang="en" style="display:none;"><i class="fas fa-check"></i> <strong>Data Autonomy：</strong> You have complete ownership and control of your data.</li>
-                            <li data-lang="zh"><i class="fas fa-check"></i> <strong>透明傳輸：</strong> 使用 AI 分析時，僅傳送匿名片段進行處理，保護您的隱私。</li>
-                            <li data-lang="en" style="display:none;"><i class="fas fa-check"></i> <strong>Transparent Transmission：</strong> When using AI analysis, only anonymous fragments are sent for processing to protect your privacy.</li>
+                            <li data-lang="en" style="display:none;"><i class="fas fa-check"></i> <strong>Data
+                                    Autonomy：</strong> You have complete ownership and control of your data.</li>
+                            <li data-lang="zh"><i class="fas fa-check"></i> <strong>透明傳輸：</strong> 使用 AI
+                                分析時，僅傳送匿名片段進行處理，保護您的隱私。</li>
+                            <li data-lang="en" style="display:none;"><i class="fas fa-check"></i> <strong>Transparent
+                                    Transmission：</strong> When using AI analysis, only anonymous fragments are sent for
+                                processing to protect your privacy.</li>
                         </ul>
                     </div>
                 </div>
@@ -195,13 +230,21 @@
                     <h2 data-lang="en" style="display:none;">Important Medical Disclaimer</h2>
                     <div class="disclaimer-body">
                         <p data-lang="zh"><strong>RxTaper 不是醫生，也不提供醫療建議。</strong></p>
-                        <p data-lang="en" style="display:none;"><strong>RxTaper is not a doctor and does not provide medical advice.</strong></p>
+                        <p data-lang="en" style="display:none;"><strong>RxTaper is not a doctor and does not provide
+                                medical advice.</strong></p>
                         <p data-lang="zh">本應用程式僅作為個人記錄工具，用於追蹤藥物使用與身心狀況。應用程式內的任何圖表、數據分析或 AI 生成內容，均僅供參考。</p>
-                        <p data-lang="en" style="display:none;">This app is only a personal tracking tool for monitoring medication use and physical/mental conditions. Any charts, data analysis, or AI-generated content in the app are for reference only.</p>
-                        <p class="highlight-text" data-lang="zh">請勿僅依賴本程式的資訊擅自調整藥物劑量或停止用藥。任何減藥計畫的制定與調整，都必須在專業醫療人員的指導與監督下進行。</p>
-                        <p class="highlight-text" data-lang="en" style="display:none;">Do not rely solely on this app's information to adjust medication dosages or stop taking medication. Any tapering plan development and adjustments must be done under the guidance and supervision of professional medical personnel.</p>
+                        <p data-lang="en" style="display:none;">This app is only a personal tracking tool for monitoring
+                            medication use and physical/mental conditions. Any charts, data analysis, or AI-generated
+                            content in the app are for reference only.</p>
+                        <p class="highlight-text" data-lang="zh">
+                            請勿僅依賴本程式的資訊擅自調整藥物劑量或停止用藥。任何減藥計畫的制定與調整，都必須在專業醫療人員的指導與監督下進行。</p>
+                        <p class="highlight-text" data-lang="en" style="display:none;">Do not rely solely on this app's
+                            information to adjust medication dosages or stop taking medication. Any tapering plan
+                            development and adjustments must be done under the guidance and supervision of professional
+                            medical personnel.</p>
                         <p data-lang="zh">若您感到身體嚴重不適或有傷害自己的念頭，請立即停止使用本應用程式並尋求緊急醫療協助。</p>
-                        <p data-lang="en" style="display:none;">If you feel severely unwell or have thoughts of harming yourself, please stop using this app immediately and seek emergency medical assistance.</p>
+                        <p data-lang="en" style="display:none;">If you feel severely unwell or have thoughts of harming
+                            yourself, please stop using this app immediately and seek emergency medical assistance.</p>
                     </div>
                 </div>
             </div>
@@ -220,11 +263,12 @@
         // Initialize language and components for home page
         const lang = initLanguage();
         initComponents(true);
-        
+
         // Ensure carousel initializes after language is set
         if (typeof initCarousel === 'function') {
             setTimeout(initCarousel, 300);
         }
     </script>
 </body>
+
 </html>
