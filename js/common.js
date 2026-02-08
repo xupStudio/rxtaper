@@ -16,8 +16,17 @@ function toggleMenu() {
 
 /**
  * Initialize smooth scrolling for anchor links
+ * This needs to be called after dynamic content (like navbar) is loaded
  */
 function initSmoothScroll() {
+    // Remove existing listeners to avoid duplicates
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // Clone and replace to remove old listeners
+        const newAnchor = anchor.cloneNode(true);
+        anchor.parentNode.replaceChild(newAnchor, anchor);
+    });
+
+    // Add new listeners
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
@@ -39,7 +48,9 @@ function initSmoothScroll() {
 }
 
 // Initialize on DOM load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    // Initial smooth scroll setup
+    // Note: This will be called again after components are loaded
     initSmoothScroll();
 });
 

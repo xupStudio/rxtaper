@@ -6,17 +6,17 @@
  * @param {string} lang - Language code ('en' or 'zh')
  */
 function generateNavbar(isHomePage = false, lang = 'zh') {
-    const navLinks = isHomePage 
-        ? SITE_CONFIG.navLinks.home[lang] 
+    const navLinks = isHomePage
+        ? SITE_CONFIG.navLinks.home[lang]
         : SITE_CONFIG.navLinks.other[lang];
-    
+
     const navLinksHTML = navLinks.map(link => {
         const classAttr = link.class ? ` class="${link.class}"` : '';
         return `<a href="${link.href}"${classAttr}>${link.text}</a>`;
     }).join('\n                ');
-    
+
     const siteName = SITE_CONFIG.name[lang];
-    
+
     return `
     <header class="navbar">
         <div class="container">
@@ -36,7 +36,7 @@ function generateNavbar(isHomePage = false, lang = 'zh') {
     </header>
 
     <div class="mobile-menu" id="mobileMenu">
-        ${isHomePage 
+        ${isHomePage
             ? navLinks.map(link => `<a href="${link.href}" onclick="toggleMenu()">${link.text}</a>`).join('\n        ')
             : SITE_CONFIG.mobileMenuOther[lang].map(link => `<a href="${link.href}" onclick="toggleMenu()">${link.text}</a>`).join('\n        ')
         }
@@ -48,15 +48,15 @@ function generateNavbar(isHomePage = false, lang = 'zh') {
  * @param {string} lang - Language code ('en' or 'zh')
  */
 function generateFooter(lang = 'zh') {
-    const footerLinksHTML = SITE_CONFIG.footerLinks[lang].map(link => 
+    const footerLinksHTML = SITE_CONFIG.footerLinks[lang].map(link =>
         `<a href="${link.href}">${link.text}</a>`
     ).join('\n                ');
-    
+
     const siteName = SITE_CONFIG.name[lang];
-    const legalFooter = lang === 'zh' 
+    const legalFooter = lang === 'zh'
         ? '此網站僅為產品介紹，實際功能以 App 內版本與條款為主。'
         : 'This website is for product introduction only. Actual features are subject to the in-app version and terms.';
-    
+
     return `
     <footer class="footer">
         <div class="container">
@@ -108,17 +108,22 @@ function initComponents(isHomePage = false) {
     } else if (typeof detectLanguage === 'function') {
         lang = detectLanguage();
     }
-    
+
     // Insert navbar
     const navbarPlaceholder = document.getElementById('navbar-placeholder');
     if (navbarPlaceholder) {
         navbarPlaceholder.innerHTML = generateNavbar(isHomePage, lang);
     }
-    
+
     // Insert footer
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
         footerPlaceholder.innerHTML = generateFooter(lang);
+    }
+
+    // Re-initialize smooth scroll for dynamically generated links
+    if (typeof initSmoothScroll === 'function') {
+        initSmoothScroll();
     }
 }
 
